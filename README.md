@@ -119,3 +119,8 @@ nohup python3 -m fastchat.serve.model_worker --model-path lmsys/fastchat-t5-3b-v
 ````
 #访问web接口测试是否Run成功
 http://192.168.1.212:21001
+
+#查询运行的服务
+ps -ef |grep fastchat
+#杀掉运行的服务
+kill -9 <PID>

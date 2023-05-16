@@ -61,7 +61,7 @@ apt update
 
 2、安装Ubuntu-drivers
 ````
-apt install ubuntu-drivers
+apt install ubuntu-drivers-common
 ````
 
 3、自动配置驱动并重启服务器

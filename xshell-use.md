@@ -1,6 +1,6 @@
 在远程服务器上使用 SSH 和 Shell 可以方便地进行文件传输和命令行操作。以下是使用 Xshell 连接远程服务器的步骤：
 
-下载安装 Xshell：从官网下载 Xshell 安装程序，并按照提示安装。
+下载安装 Xshell：从官网下载 Xshell 安装程序，并按照提示安装。https://www.xshell.com/zh/xshell/
 
 打开 Xshell：安装完成后，打开 Xshell。
 

@@ -71,9 +71,7 @@ reboot
 ````
 4、安装Aconda
 ````
-apt install anaconda
-source ~/.bashrc
-conda --version
+apt install anaconda;source ~/.bashrc;conda --version
 ````
 5、进入conda环境
 ````
@@ -92,8 +90,7 @@ conda install -c anaconda cudatoolkit
 #创建一个文件夹
 
 ````
-mkdir -r  /usr/local/apps/fastchat
-cd /usr/local/apps/fastchat
+mkdir -r  /usr/local/apps/fastchat;cd /usr/local/apps/fastchat
 ````
 
 #安装fschat

@@ -117,7 +117,7 @@ nohup python3 -m fastchat.serve.openai_api_server > fschat_api_output.log &
 
 #使用GPU执行推理，测试环境
 ````
-nohup python3 -m fastchat.serve.model_worker --model-path lmsys/fastchat-t5-3b-v1.0 --controller http://localhost:21001 --port 31000 --worker http://localhost:31000 --gpus 1 > fschat_model_output.log &
+nohup python3 -m fastchat.serve.model_worker --model-path lmsys/fastchat-t5-3b-v1.0 --controller http://localhost:21001 --port 31000 --worker http://localhost:31000 --nums-gpus 1 > fschat_model_output.log &
 ````
 #访问web接口测试是否Run成功
 http://192.168.1.212:21001

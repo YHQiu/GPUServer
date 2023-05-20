@@ -4,7 +4,7 @@
 
 ![Image2](images/superm_5.png)
 
-1.2 开机安装DEL进入BIOS配置
+1.2 开机连续按DEL进入BIOS配置
 
 ![Image2](images/superm_1.jpg)
 
@@ -16,7 +16,7 @@
 ![Image3](images/superm_2_1.jpg)
 
 
-****3、输入刚才配置的IP登录管理页面
+****3、在与主板管理网络相同局域网的电脑上面，输入刚才配置的IP登录管理页面
 账号：ADMIN 密码：主板上面的PWD
 
 ![Image1](images/superm_4.png)

@@ -72,7 +72,18 @@ reboot
 ````
 4、安装Aconda
 ````
+### apt 安装法
 apt install anaconda;source ~/.bashrc;conda --version
+````
+````
+### 镜像安装法
+cd /opt;mkdir anaconda;cd anaconda;wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+bash Anaconda3-2022.05-Linux-x86_64.sh
+source ~/.bashrc
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+conda info
 ````
 5、进入conda环境
 ````

@@ -61,6 +61,7 @@ apt update
 
 2、安装Ubuntu-drivers
 ````
+apt install alsa-utils
 apt install ubuntu-drivers-common
 ````
 

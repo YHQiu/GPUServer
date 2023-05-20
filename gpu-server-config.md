@@ -71,10 +71,11 @@ ubuntu-drivers autoinstall
 reboot
 ````
 4、安装Aconda
-````
+~~````
 ### apt 安装法
 apt install anaconda;source ~/.bashrc;conda --version
-````
+````~~
+
 ````
 ### 镜像安装法
 cd /opt;mkdir anaconda;cd anaconda;wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh

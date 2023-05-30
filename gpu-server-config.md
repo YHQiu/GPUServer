@@ -88,6 +88,10 @@ conda info
 ### conda activate <environment-name>
 ### <environment-name> 替换为你的环境名称，如env_1
 conda activate env_1
+### 注意进入conda环境以后您使用的Python pip等被替换为conda环境的独立包。要退出该环境回到系统环境，可以执行
+conda deactivate
+### 要查看conda环境，可以执行
+conda env list
 ````
 
 6、测试环境，这里我们使用FastChat执行推理来测试GPU服务器配置情况。

@@ -174,6 +174,7 @@ cd /opt
 mkdir nccl-test
 cd nccl-test
 git clone https://github.com/NVIDIA/nccl-tests.git
+cd nccl-test
 
 make
 ````

@@ -140,3 +140,30 @@ http://192.168.1.212:21001
 ps -ef |grep fastchat
 #杀掉运行的服务
 kill -9 <PID>
+
+## NCCL
+Network Installer for Ubuntu22.04
+
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
+$ sudo apt-get update
+Network Installer for Ubuntu20.04
+
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb
+$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
+$ sudo apt-get update
+Network Installer for Ubuntu18.04
+
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
+$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
+$ sudo apt-get update
+Network Installer for RedHat/CentOS 8
+
+$ sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo
+Network Installer for RedHat/CentOS 7
+
+$ sudo yum-config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo
+
+For Ubuntu: sudo apt install libnccl2=2.13.4-1+cuda11.7 libnccl-dev=2.13.4-1+cuda11.7
+For RHEL/Centos: sudo yum install libnccl-2.13.4-1+cuda11.7 libnccl-devel-2.13.4-1+cuda11.7 libnccl-static-2.13.4-1+cuda11.7
+

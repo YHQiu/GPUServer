@@ -149,6 +149,7 @@ $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 $ sudo apt-get update
 Network Installer for Ubuntu20.04
 
+##20系统也用这个
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb
 $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 $ sudo apt-get update
@@ -178,53 +179,6 @@ cd nccl-test
 
 make
 ````
-
-````
-如果出现libc6错误.
-在 Ubuntu 20.04 中，libc6 2.31 是默认安装的 libc6 版本。要升级 libc6 到一个更高的版本，你需要添加一个源，并执行相应的升级命令。
-
-请注意，升级 libc6 是一个敏感的操作，可能会对系统产生严重影响，包括导致系统不稳定或不可用。在执行下面的步骤之前，请确保你了解潜在的风险，并在进行更改之前备份重要的数据和系统配置。
-
-下面是一个可能的方法来升级 libc6：
-
-编辑源列表文件：打开终端，并使用管理员权限编辑 /etc/apt/sources.list 文件。可以使用以下命令来编辑文件：
-
-shell
-Copy code
-sudo nano /etc/apt/sources.list
-添加更新源：在文件的末尾添加以下两行来添加更新源：
-
-shell
-Copy code
-deb http://archive.ubuntu.com/ubuntu/ focal-proposed restricted main multiverse universe
-deb-src http://archive.ubuntu.com/ubuntu/ focal-proposed restricted main multiverse universe
-注意：focal-proposed 是针对 Ubuntu 20.04（代号为 Focal Fossa）的，你可以根据你的 Ubuntu 版本进行调整。
-
-保存并关闭文件：按下 Ctrl + X 键，然后输入 Y 保存文件并退出编辑器。
-
-更新软件包列表：运行以下命令来更新软件包列表：
-
-shell
-Copy code
-sudo apt-get update
-升级 libc6：运行以下命令来升级 libc6：
-
-shell
-Copy code
-sudo apt-get install libc6
-这将尝试升级 libc6 到可用的最新版本。
-
-移除更新源：升级完成后，可以将更新源从 /etc/apt/sources.list 文件中移除，以避免后续使用出现问题。使用管理员权限打开 /etc/apt/sources.list 文件，并删除添加的更新源行，然后保存文件。
-
-更新软件包：最后，运行以下命令来确保系统中的所有软件包都是最新的：
-
-shell
-Copy code
-sudo apt-get update
-sudo apt-get upgrade
-请注意，这只是一种尝试升级 libc6 的方法，并且可能因系统配置、依赖关系和其他因素而有所不同。如果你遇到问题或不确定如何处理，建议寻求专业支持或咨询相关的技术资源。
-````
-
 
 
 

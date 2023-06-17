@@ -177,11 +177,26 @@ cd nccl-test
 git clone https://github.com/NVIDIA/nccl-tests.git
 cd nccl-test
 
-make MPI=1
+sudo apt-get install libopenmpi-dev
+sudo mkdir /usr/include/mpi/
+sudo ln -s /usr/lib/x86_64-linux-gnu/openmpi/include/* /usr/include/mpi/
+
+MPI=/usr/lib/x86_64-linux-gnu/openmpi/
+NCCL=/usr/include/
+CUDA=/usr/cuda
+
+````
+make
+OR
+make MPI=1 MPI_HOME=/usr/lib/x86_64-linux-gnu/openmpi/ CUDA_HOME=/usr/local/cuda NCCL_HOME=/ucr/include
+````
 
 CUDA_DEVICE=4,5  ./build/all_reduce_perf -b 8 -e 128M -f 2 -g 2
 
 ````
+
+
+
 
 
 

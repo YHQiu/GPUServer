@@ -141,7 +141,7 @@ ps -ef |grep fastchat
 #杀掉运行的服务
 kill -9 <PID>
 
-## 集群连接，NCCL配置
+## 集群连接，NCCL配置，以及NCCL-TEST
 Network Installer for Ubuntu22.04
 ````
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb

@@ -143,7 +143,7 @@ kill -9 <PID>
 
 ## NCCL
 Network Installer for Ubuntu22.04
-
+````
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
 $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 $ sudo apt-get update
@@ -176,6 +176,7 @@ cd nccl-test
 git clone https://github.com/NVIDIA/nccl-tests.git
 
 make
+````
 
 
 

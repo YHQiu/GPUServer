@@ -167,3 +167,18 @@ $ sudo yum-config-manager --add-repo https://developer.download.nvidia.com/compu
 For Ubuntu: sudo apt install libnccl2=2.13.4-1+cuda11.7 libnccl-dev=2.13.4-1+cuda11.7
 For RHEL/Centos: sudo yum install libnccl-2.13.4-1+cuda11.7 libnccl-devel-2.13.4-1+cuda11.7 libnccl-static-2.13.4-1+cuda11.7
 
+##NCCL-TEST
+sudo apt install openmpi-bin
+
+cd /opt
+mkdir nccl-test
+cd nccl-test
+git clone https://github.com/NVIDIA/nccl-tests.git
+
+make
+
+
+
+
+
+

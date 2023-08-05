@@ -142,8 +142,10 @@ ps -ef |grep fastchat
 kill -9 <PID>
 
 ## 集群连接，NCCL配置，以及NCCL-TEST
-#Network Installer for Ubuntu22.04
+
+*安装NCCL*
 ````
+#Network Installer for Ubuntu22.04
 #$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
 #$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 #$ sudo apt-get update
@@ -174,7 +176,7 @@ For RHEL/Centos:
 sudo yum install libnccl-2.13.4-1+cuda11.7 libnccl-devel-2.13.4-1+cuda11.7 libnccl-static-2.13.4-1+cuda11.7
 ````
 
-##NCCL-TEST
+*安装NCCL-TEST*
 ````bash
 sudo apt install openmpi-bin
 cd /opt
@@ -192,15 +194,21 @@ NCCL=/usr/include/
 CUDA=/usr/cuda
 ````
 
-````
+*构建NCCL-TEST*
+````bash
+# 单机
 make
 OR
+# 集群
 make MPI=1 MPI_HOME=/usr/lib/x86_64-linux-gnu/openmpi/ CUDA_HOME=/usr/local/cuda NCCL_HOME=/ucr/include
 ````
 
+*测试NCCL*
+````bash
 CUDA_DEVICE=4,5  ./build/all_reduce_perf -b 8 -e 128M -f 2 -g 2
-
 ````
+
+
 
 
 

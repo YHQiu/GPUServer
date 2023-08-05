@@ -100,6 +100,15 @@ conda env list
 ````
 conda install -c anaconda cudatoolkit
 ````
+#在物理环境安装CUDA
+#首先在Nidia官方找到CUDA下载链接 官网地址<https://developer.nvidia.com/cuda-toolkit-archive>
+#然后找到一个版本，比如11.7
+````bash
+cd /opt;mkdir cuda_shell
+wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda_11.7.1_515.65.01_linux.run
+sudo sh cuda_11.7.1_515.65.01_linux.run
+# 安装提示安装，此时会弹出CUDA选配项，按自己的需求安装。
+````
 
 #创建一个文件夹
 

@@ -142,35 +142,41 @@ ps -ef |grep fastchat
 kill -9 <PID>
 
 ## 集群连接，NCCL配置，以及NCCL-TEST
-Network Installer for Ubuntu22.04
+#Network Installer for Ubuntu22.04
 ````
-$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
-$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
-$ sudo apt-get update
-Network Installer for Ubuntu20.04
+#$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+#$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
+#$ sudo apt-get update
 
-##20系统也用这个
+Network Installer for Ubuntu20.04
+##20系统用这个
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb
 $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 $ sudo apt-get update
-Network Installer for Ubuntu18.04
 
+Network Installer for Ubuntu18.04
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
 $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 $ sudo apt-get update
+
 Network Installer for RedHat/CentOS 8
-
 $ sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo
-Network Installer for RedHat/CentOS 7
 
+Network Installer for RedHat/CentOS 7
 $ sudo yum-config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo
 
-For Ubuntu: sudo apt install libnccl2=2.13.4-1+cuda11.7 libnccl-dev=2.13.4-1+cuda11.7
-For RHEL/Centos: sudo yum install libnccl-2.13.4-1+cuda11.7 libnccl-devel-2.13.4-1+cuda11.7 libnccl-static-2.13.4-1+cuda11.7
+For Ubuntu:
+````bash
+sudo apt install libnccl2=2.13.4-1+cuda11.7 libnccl-dev=2.13.4-1+cuda11.7
+````
+For RHEL/Centos: 
+````bash
+sudo yum install libnccl-2.13.4-1+cuda11.7 libnccl-devel-2.13.4-1+cuda11.7 libnccl-static-2.13.4-1+cuda11.7
+````
 
 ##NCCL-TEST
+````bash
 sudo apt install openmpi-bin
-
 cd /opt
 mkdir nccl-test
 cd nccl-test
@@ -184,6 +190,7 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/openmpi/include/* /usr/include/mpi/
 MPI=/usr/lib/x86_64-linux-gnu/openmpi/
 NCCL=/usr/include/
 CUDA=/usr/cuda
+````
 
 ````
 make

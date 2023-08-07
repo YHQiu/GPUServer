@@ -154,10 +154,7 @@ kill -9 <PID>
 
 *安装NCCL*
 ````
-#Network Installer for Ubuntu22.04
-#$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
-#$ sudo dpkg -i cuda-keyring_1.0-1_all.deb
-#$ sudo apt-get update
+#根据系统版本选择一个安装即可。
 
 Network Installer for Ubuntu20.04
 ##20系统用这个

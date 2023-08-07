@@ -198,13 +198,15 @@ sudo apt-get install libopenmpi-dev
 sudo mkdir /usr/include/mpi/
 sudo ln -s /usr/lib/x86_64-linux-gnu/openmpi/include/* /usr/include/mpi/
 
-MPI=/usr/lib/x86_64-linux-gnu/openmpi/
-NCCL=/usr/include/
-CUDA=/usr/cuda
 ````
 
 *构建NCCL-TEST*
 ````bash
+# 设置环境变量
+MPI=/usr/lib/x86_64-linux-gnu/openmpi/
+NCCL=/usr/include/
+CUDA=/usr/cuda
+# 构建（二选一）
 # 单机
 make
 OR
@@ -214,7 +216,7 @@ make MPI=1 MPI_HOME=/usr/lib/x86_64-linux-gnu/openmpi/ CUDA_HOME=/usr/local/cuda
 
 *测试NCCL*
 ````bash
-CUDA_DEVICE=4,5  ./build/all_reduce_perf -b 8 -e 128M -f 2 -g 2
+CUDA_DEVICE=0,1  ./build/all_reduce_perf -b 8 -e 128M -f 2 -g 2
 ````
 
 
